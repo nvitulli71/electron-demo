@@ -49,6 +49,12 @@ const menuTemplate = [
         },
       },
       {
+        label: "Clear ToDo",
+        click() {
+          mainWindow.webContents.send("todo:clear");
+        },
+      },
+      {
         label: "Quit",
         accelerator: "CommandOrControl+Q",
         click() {
